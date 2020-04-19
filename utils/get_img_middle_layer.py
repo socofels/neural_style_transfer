@@ -48,12 +48,12 @@ class GetImgMiddleLayer():
     def __init__(self):
         self.extractor = StyleContentModel(CONFIG.style_layer ,CONFIG.content_layer)
 
-    def content_target(self):
-        target = self.extractor(get_img(CONFIG.content_pic_path))["content"]
+    def content_target(self,path=CONFIG.content_pic_path):
+        target = self.extractor(get_img(path))["content"]
         return target
 
-    def style_target(self):
-        target = self.extractor(get_img(CONFIG.style_pic_path))["style"]
+    def style_target(self,path=CONFIG.style_pic_path):
+        target = self.extractor(get_img(path))["style"]
         return target
 
 
