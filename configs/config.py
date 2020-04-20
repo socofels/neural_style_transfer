@@ -16,7 +16,7 @@ class CONFIG:
     beta = 1e-2
 
     # 从VGG抽取输出层的名称
-    content_layer = ["block5_conv3"]
+    content_layer = ["block3_conv1"]
     style_layer = ["block1_conv2",
                    "block2_conv2",
                    "block3_conv3",

@@ -10,6 +10,7 @@ def loss_sum(content_and_style_matrix):
     content = content_and_style_matrix["content"]
     style_matrix = content_and_style_matrix["style"]
     loss = K.sum(CONFIG.alpha * loss_content(content), CONFIG.beta * loss_style(style_matrix))
+    print(f"cotentloss:{loss_content(content)}\nstyleloss:{loss_style(style_matrix)}")
     return loss
 
 
