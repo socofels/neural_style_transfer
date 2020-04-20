@@ -1,12 +1,12 @@
 class CONFIG:
     # 内容图片的位置
-    content_pic_path = "../data/content_img/6.jpg"
+    content_pic_path = "../data/content_img/1.jpg"
 
     # 风格图片的位置
-    style_pic_path = "../data/style_img/1.jpeg"
+    style_pic_path = "../data/style_img/4.jpeg"
 
     # 选择到vgg哪一层结束
-    end_layer_name = "block5_conv3"
+
     IMAGE_HEIGHT = 200
     IMAGE_WIDTH = 800
     COLOR_CHANNELS = 3
@@ -22,10 +22,12 @@ class CONFIG:
                    "block3_conv3",
                    "block4_conv3"
                    ]
-    style_layer_weight = {"block1_conv2": 0.25,
-                          "block2_conv2": 0.25,
-                          "block3_conv3": 0.25,
-                          "block4_conv3": 0.25}
+    style_layer_weight = {"block1_conv2": 0.2,
+                          "block2_conv2": 0.2,
+                          "block3_conv3": 0.2,
+                          "block4_conv3": 0.2,
+                          "block5_conv3":0.2
+                          }
     # 学习速率
     lr = 2
 
